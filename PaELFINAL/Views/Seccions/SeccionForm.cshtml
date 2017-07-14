@@ -1,0 +1,38 @@
+﻿@model PaELFINAL.ViewModel.SeccionViewModel
+@{
+    ViewBag.Title = "New";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2>Nueva Seccion</h2>
+@using (Html.BeginForm("Save", "Seccion"))
+{
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.seccion.Horario)
+        @Html.TextBoxFor(m => m.seccion.Horario, "{0:d MMM yyyy}", new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.seccion.Dias)
+        @Html.TextBoxFor(m => m.seccion.Dias, " ", new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.seccion.Aula)
+        @Html.TextBoxFor(m => m.seccion.Aula, "i.e GC,AJ,ER,PB", new { @class = "form-control" })
+    </div>
+    @*@<div class="form-group">
+            @Html.LabelFor(m => m.seccion.Profesor)
+            @Html.DropDownListFor(m => m.seccion.Profesor, new SelectList(Model.profesores, "ProfesorID", "Primer_Nombre"), "Seleccione el area de la materia", new { @class = "form-control" })
+        </div>*@
+    <div class="form-group">
+        @Html.LabelFor(m => m.seccion.Asignatura)
+        @Html.DropDownListFor(m => m.seccion.Asignatura, new SelectList(Model.asignatura, "asignaturaID", "NombreAsignatura"), "Selecciona la materia", new { @class = "form-control" })
+    </div>
+    <!-- <div class="checkbox">
+        <label>
+            @*Html.CheckBoxFor(m => m.Customer.IsSubscribedToNewsletter)*@ Subscribed to Newsletter?
+        </label>
+    </div> -->
+    <button type="submit" class="btn btn-primary">Save</button>
+}

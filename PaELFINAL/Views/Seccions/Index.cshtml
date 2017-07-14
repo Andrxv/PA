@@ -1,0 +1,41 @@
+﻿@model IEnumerable<PaELFINAL.Models.Seccion>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <button type="submit" class="btn btn-primary">@Html.ActionLink("Crear", "New", "Seccion")</button>
+</p>
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Seccion</th>
+            <th>Aula</th>
+            <th>Asignatura</th>
+            <th>Horario</th>
+            <th>Dias</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.seccionID</td>
+                <td>@item.Aula</td>
+                <td>@item.Asignatura</td>
+                <td>@item.Horario</td>
+                <td>@item.Dias</td>
+                @*<td>
+                   Html.ActionLink("Edit", "Edit", new { id = item.seccionID }) |
+        @Html.ActionLink("Details", "Details", new { id = item.seccionID }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.seccionID })
+    </td>*@
+            </tr>
+        }
+    </tbody>
+
+</table>

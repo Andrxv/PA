@@ -1,0 +1,82 @@
+﻿@model PaELFINAL.Models.Estudiante
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Estudiante</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.primer_nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.primer_nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.segundo_nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.segundo_nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.primer_apellido)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.primer_apellido)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.segundo_apellido)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.segundo_apellido)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.trimestres_cursados)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.trimestres_cursados)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.indice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.indice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.creditos_aprobados)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.creditos_aprobados)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.materias_aprobadas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.materias_aprobadas)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.EstudianteID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
